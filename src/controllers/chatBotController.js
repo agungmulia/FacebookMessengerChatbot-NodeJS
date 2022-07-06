@@ -1,7 +1,6 @@
 require("dotenv").config();
 import { json } from "body-parser";
 import request from "request";
-import { writeFileSync } from 'fs';
 import chatBotService from "../services/chatBotService"
 
 let userFirstName = "";
@@ -30,8 +29,6 @@ let postWebhook = async (req, res) =>{
             let webhook_event = entry.messaging[0];
             console.log(webhook_event);
 
-
-            // Get the sender PSID
             let sender_psid = webhook_event.sender.id;
             userId = sender_psid;
             console.log('Sender PSID: ' + sender_psid);
@@ -100,14 +97,6 @@ let getMessagesById = (req, res) => {
 let getSummary = (req, res) => {
     res.send( summaryData )
 };
-
-// function to add a message into the array and call save to json 
-function addMessageToAPI(obj){
-    if ((COUNT_MESSAGES % 2) != 0){
-        ARRAYOF_MESSAGES.push(obj);
-        writeFileSync(__dirname + "/" + "data.json", JSON.stringify(ARRAYOF_MESSAGES));
-    }
-}
 
 let getWebhook = (req, res) => {
     // Your verify token. Should be a random string.
