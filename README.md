@@ -1,4 +1,4 @@
-# Facebook Messenger Chatbot using NodeJS and MongoDB
+# Facebook Messenger Chatbot using NodeJS
 ![bandicam 2022-07-06 07-46-06-940_1](https://user-images.githubusercontent.com/90015124/177462773-bd8e7d0e-3eb6-4aa2-b155-b5f2351e25a5.gif)
 
 ## REST Endpoint Documentation
@@ -48,32 +48,15 @@
 4. Create a Facebook page for your bot with only send message button activated.
 5. Create you Facebook Developer app [here](https://developers.facebook.com/).
 6. Adjust your variables such ass Facebook PageID,token, etc with your Facebook app and config your Facebook webhook by adding /webhook to your Heroku app URL, also dont forget to enable the NLP (Natural Language Processing) that is given by Facebook.
-7. Create your MongoDB database.
-
-### MongoDB database installation
-MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. Dont forget to download MongoDB to your machine if you're not installed them [here](https://www.mongodb.com/try/download/community).
-1. If you dont have any MongoDB account, register them [here](https://account.mongodb.com/account/register?signedOut=true)
-2. In your main organization page, create a new project and name them whatever you want.
-  ![image](https://user-images.githubusercontent.com/90015124/177465513-eaa0e2f6-5ff9-4d76-af6c-78161afa8694.png)
-3. At your main page, create your cluster, Choose the shared version and named your cluster.
-  ![image](https://user-images.githubusercontent.com/90015124/177465740-c1b6ff7d-6dd6-4f2c-bae6-758a779165ab.png)
-4. Create your database user with username and password.
-  ![image](https://user-images.githubusercontent.com/90015124/177465881-7624b27c-4296-4796-8afc-18a92d6086e2.png)
-5. Set your network access so any IP can accesed your database.
-  ![image](https://user-images.githubusercontent.com/90015124/177465976-47ad17f8-4bae-46e2-96ac-780394f3659e.png)
-5. At your main database page, go to your cluster name and select collections. Then you can create your database and collection, for me, I use two collection, but it is up to you how you want to create your collection
-  ![image](https://user-images.githubusercontent.com/90015124/177466189-2a1d7722-ec51-4ff2-b4c9-d588460b8263.png)
-6. Go back to your main database page and choose connect. choose connect your application with native drivers and get the link.
-  ![image](https://user-images.githubusercontent.com/90015124/177466380-999d5015-4acf-45fd-a167-49917b44556d.png)
-  ![image](https://user-images.githubusercontent.com/90015124/177466418-5adbb3e5-f157-4756-92cd-eee277928d20.png)
-7. Put all the variables needed to your env file and your database is ready to be used.
+7. Your bot is ready to be used.
 
 ## Reference and documentation
 - https://developers.facebook.com/docs/
+- https://www.mongodb.com/docs/
 - https://www.youtube.com/watch?v=x_0X3EHmIu4
 
 ## Note
-In this app I used facebook webhook with NodeJS and MongoDB as database, I also created a version that not has any database [here](https://github.com/agungmulia/FacebookMessengerChatbot-NodeJS-MongoDB) so the data happens  synchronously with the REST Endpoint. Also I want to mention that testing is coming to next update soon, I made my testing using Jest. With this app you also can test my chatbot [in Facebook](https://www.facebook.com/agungmuliachatbot/?locale=en_US) or in [Heroku app](https://agungchatbot.herokuapp.com/) that I've already deployed
+In this version app I used facebook webhook with NodeJS, I also created a version that are using MongoDB as database which is [here](https://github.com/agungmulia/FacebookMessengerChatbot-NodeJS-MongoDB) so the data is getting processed through the database. Also I want to mention that testing is coming to next update soon, I made my testing using Jest. With this app you also can test my chatbot in [Facebook](https://www.facebook.com/agungmuliachatbot/?locale=en_US) or in [Heroku app](https://agungchatbot.herokuapp.com/) that I've already deployed. I finalized my Git and reinitialized them to look more clean, I want to use git flow, but my commits are a lot, so I choose to reinitialized and rebased them.
 
 
 
