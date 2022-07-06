@@ -70,7 +70,6 @@ MongoDB is a source-available cross-platform document-oriented database program.
 
 ## Reference and documentation
 - https://developers.facebook.com/docs/
-- https://www.mongodb.com/docs/
 - https://www.youtube.com/watch?v=x_0X3EHmIu4
 
 ## Note
